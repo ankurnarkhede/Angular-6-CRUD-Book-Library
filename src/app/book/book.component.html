@@ -4,7 +4,28 @@
 
 </div>
 
+<div>
+  <table>
+    <thead>
+    <tr>
+      <th>ISBN</th>
+      <th>Title</th>
+      <th>Author</th>
+    </tr>
+    </thead>
 
+    <tbody>
+
+    <tr *ngFor="let book of books | async">
+
+      <td>{{book.isbn}}</td>
+      <td>{{book.title}}</td>
+      <td>{{book.author}}</td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
 
 <!--<div class="example-container mat-elevation-z8">-->
   <!--<table mat-table #table [dataSource]="dataSource">-->
